@@ -1,0 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #161616;
+}
+
+#main-content {
+  position: relative;
+  background-color: #161616;
+  i {
+    float: right;
+    font-size: 2rem;
+    padding: 2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

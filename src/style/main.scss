@@ -24,7 +24,8 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/landing';
 
 // 6. Page-specific styles
 @import
@@ -33,7 +34,3 @@
 // 7. Themes
 @import
   'themes/default';
-
-body {
-  background-color: purple;
-}
