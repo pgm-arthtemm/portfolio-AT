@@ -9,9 +9,20 @@ const star = loader.load('./assets/img/star.png');
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(new THREE.Color(0x111111), 1)
+renderer.setClearColor(new THREE.Color(0x111111))
 camera.position.setZ(1.5);
 camera.position.setX(0);
+
+// Mouse
+document.addEventListener('mousemove', animateParticles);
+
+let mouseX = 0;
+let mouseY = 0
+
+function animateParticles(event) {
+  mouseX = event.clientY;
+  mouseY = event.clientX;
+}
 
 const pointLight = new THREE.PointLight(0xffffff, 0.1);
 pointLight.position.x = 2;
@@ -21,6 +32,13 @@ scene.add(pointLight);
 
 const particlesGeometry = new THREE.BufferGeometry;
 const particlesCnt = 5000;
+
+const torusGeometry = new THREE.TorusGeometry(0.7, 0.17, 10, 20);
+const torusMaterial = new THREE.MeshBasicMaterial({
+  color: 0xff0000,
+  wireframe: true
+});
+const torusMesh = new THREE.Mesh(torusGeometry, torusMaterial);
 
 const posArray = new Float32Array(particlesCnt * 3);
 
@@ -38,9 +56,24 @@ const material = new THREE.PointsMaterial({
 })
 
 const particlesMesh = new THREE.Points(particlesGeometry, material);
-scene.add(particlesMesh);
+scene.add(torusMesh, particlesMesh);
+
+
+// Animate function
+const clock = new THREE.Clock();
 
 function animate() {
+  const elapsedTime = clock.getElapsedTime();
+  particlesMesh.rotation.y = -0.1 * elapsedTime;
+
+  torusMesh.rotation.z += 0.001
+
+  if (mouseX > 0) {
+    particlesMesh.rotation.x = -mouseY * (elapsedTime * 0.00008);
+    particlesMesh.rotation.y = -mouseX * (elapsedTime * 0.00008);
+  }
+
+
   requestAnimationFrame(animate);
 
   renderer.render(scene, camera);
