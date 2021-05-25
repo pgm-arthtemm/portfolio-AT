@@ -17,6 +17,9 @@
 <body>
   <section id="main-content">
     {% include "_components/header.njk" %}
+    <main>
+      {{ content | safe }}
+    </main>
   </section>
   <script src="./../assets/js/main.js"> </script>
 </body>

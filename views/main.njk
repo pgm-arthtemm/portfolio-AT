@@ -1,6 +1,13 @@
 ---
 layout: base
-eleventyNavigation:
-  key: Home
-  order: 1
 ---
+
+<section class="projects">
+  <h2>Projects</h2>
+  <ul class="home-projects">
+    {% for project in collections.projects %}
+      <img src="./../assets/img/projects/{{ project.data.image }}.png" />
+      <h3>{{ project.data.name }}</h3>
+    {% endfor %}
+  </ul>
+</section>
