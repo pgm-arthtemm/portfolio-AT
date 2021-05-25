@@ -1,6 +1,5 @@
 .landing {
   font-weight: bold;
-  height: 100vh;
   display: flex;
   img {
     filter: grayscale(100%);
@@ -8,6 +7,7 @@
     height: 100vh;
   }
   &-text {
+    padding-top: 42vh;
     z-index: 5;
     margin: auto;
     text-align: center;
