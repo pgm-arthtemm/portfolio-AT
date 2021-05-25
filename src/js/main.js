@@ -4,32 +4,16 @@ window.addEventListener('resize', () => {
 });
 
 const navButtons = document.querySelectorAll('hamburger__nav-list a');
-const landingText = document.querySelector('.landing');
 const discoverButton = document.querySelector('.landing-text a');
 const hamburgerIcon = document.querySelector('.fas.fa-bars');
 const hamburgerClose = document.querySelector('.fas.fa-times');
 const hamburgerNav = document.querySelector('.hamburger__nav');
 const mainNav = document.querySelector('.main__navigation');
-const landingGreeting = document.querySelector('.landing p');
-const landingPage = document.querySelector('.landing');
 
-discoverButton.addEventListener('click', () => {
-  setTimeout(() => {
-    if (window.innerWidth <= 1024) {
-      landingPage.style.display = 'none';
-    }
-    discoverButton.style.display = 'none';
-    landingGreeting.innerHTML = 'Arthur Temmerman';
-    landingText.classList.add('afterclick');
-  }, 500)
+hamburgerIcon.addEventListener('click', () => {
+  hamburgerNav.style.left = '0';
+  hamburgerNav.style.transition = 'all 0.5s';
 })
-
-console.log(hamburgerIcon);
-
-// hamburgerIcon.addEventListener('click', () => {
-//   hamburgerNav.style.left = '0';
-//   hamburgerNav.style.transition = 'all 0.5s';
-// })
 
 hamburgerClose.addEventListener('click', () => {
   hamburgerNav.style.left = '-100vw';
