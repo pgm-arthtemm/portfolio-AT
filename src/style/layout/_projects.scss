@@ -18,21 +18,4 @@
       }
     }
   }
-  @media(max-width:800px) {
-    .home-projects {
-      padding-top: 2rem;
-      &__list-item {
-        list-style-type: none;
-        padding-bottom: 5rem;
-        transition: all 0.2s;
-        h3 {
-          font-size: 3rem;
-        }
-        p {
-          font-size: 1rem;
-          color: red;
-        }
-      }
-    }
-  }
 }

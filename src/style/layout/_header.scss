@@ -23,6 +23,10 @@
 }
 
 .main__navigation {
+  a {
+    color: white;
+    text-decoration: none;
+  }
   height: 5rem;
   background-color: #000;
   nav {
