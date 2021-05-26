@@ -2,3 +2,12 @@ body {
   font-family: sans-serif;
   color: white;
 }
+
+span {
+  &.finished {
+    color: green;
+  }
+  &.indev {
+    color: orange;
+  }
+}
