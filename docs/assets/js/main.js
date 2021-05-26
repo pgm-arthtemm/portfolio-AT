@@ -10,6 +10,8 @@ const hamburgerClose = document.querySelector('.fas.fa-times');
 const hamburgerNav = document.querySelector('.hamburger__nav');
 const mainNav = document.querySelector('.main__navigation');
 
+hamburgerNav.style.left = '-100vw';
+
 hamburgerIcon.addEventListener('click', () => {
   hamburgerNav.style.left = '0';
   hamburgerNav.style.transition = 'all 0.5s';

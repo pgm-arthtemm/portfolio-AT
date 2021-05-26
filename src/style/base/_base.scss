@@ -6,6 +6,19 @@ body {
   background-color: #161616;
 }
 
+main {
+  width: 85%;
+  margin: auto;
+  padding: 5rem 0;
+}
+
+@media(max-width:800px) {
+  main {
+    width: 95%;
+    margin: auto;
+  }
+}
+
 #main-content {
   position: relative;
   background-color: #161616;

@@ -2,11 +2,9 @@
   transition: all 0.5s;
   position: fixed;
   z-index: 10;
-  overflow-x: hidden;
   background-color: black;
   min-height: -webkit-fill-available;
   width: 100%;
-  left: -100vw;
   overflow-y: hidden;
   &-list {
     list-style-type: none;

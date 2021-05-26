@@ -6,8 +6,10 @@ layout: base
   <h2>Projects</h2>
   <ul class="home-projects">
     {% for project in collections.projects %}
-      <img src="./../assets/img/projects/{{ project.data.image }}.png" />
-      <h3>{{ project.data.name }}</h3>
+      <li class="home-projects__list-item">
+        <h3>{{ project.data.name }}</h3>
+        <p>{{ project.data.synopsis }}</p>
+      </li>
     {% endfor %}
   </ul>
 </section>
