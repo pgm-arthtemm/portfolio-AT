@@ -2,6 +2,11 @@
   .home-projects {
     padding-top: 0rem;
     &__list-item {
+      @media(max-width:800px) {
+        h3 {
+          font-size: 1rem;
+        }
+      }
       .project-detail {
         display: none;
         padding-top: 1rem;
