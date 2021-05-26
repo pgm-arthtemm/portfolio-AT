@@ -1,18 +1,55 @@
 .projects {
   .home-projects {
-    padding-top: 2rem;
+    padding-top: 0rem;
     &__list-item {
-      list-style-type: none;
-      padding-bottom: 5rem;
-      transition: all 0.2s;
-      h3 {
-        font-size: 5rem;
+      .project-detail {
+        display: none;
+        padding-top: 1rem;
+        p {
+          font-size: 1.5rem;
+          padding-bottom: 1rem;
+        }
+        ul {
+          list-style-type: none;
+          padding: 1rem 0;
+          padding-bottom: 2rem;
+          display: flex;
+          li {
+            padding-right: 1rem;
+            font-size: 1.2rem;
+            color: #a0a0a0;
+          }
+        }
+        svg {
+          width: 40px;
+          height: 40px;
+          path {
+            fill: white;
+          }
+        }
+        &.open {
+          display: block;
+        }
       }
-      p {
+      width: 50%;
+      display: inline-block;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      list-style-type: none;
+      padding-bottom: 6rem;
+      display: block;
+      h3 {
+        transition: all 0.2s;
+        font-size: 6rem;
+      }
+      h4 {
         font-size: 1.5rem;
+        font-weight: lighter;
         color: red;
       }
-      &:hover {
+      &:hover h3 {
         transform: translateX(30px);
         cursor: pointer;
       }
