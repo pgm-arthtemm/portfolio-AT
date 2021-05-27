@@ -23,6 +23,7 @@ hamburgerIcon.addEventListener('click', () => {
 
 hamburgerClose.addEventListener('click', () => {
   hamburgerNav.style.display = 'none';
+  console.log('closed')
 })
 
 const checkWindowWidth = () => {
