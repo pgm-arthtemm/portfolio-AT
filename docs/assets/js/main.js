@@ -17,6 +17,17 @@ const hamburgerClose = document.querySelector('.fas.fa-times');
 const hamburgerNav = document.querySelector('.hamburger__nav');
 const mainNav = document.querySelector('.main__navigation');
 const mobileLogo = document.querySelector('.hamburger__menu-heading a');
+const hamburgerMenuItems = document.querySelectorAll('.hamburger__nav-list li');
+
+// Hide hamburger menu after clicking on menu item.
+// Added 0.5 seconds delay to wait for page change.
+hamburgerMenuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    setTimeout(() => {
+      hamburgerNav.style.display = 'none';
+    }, 500);
+  })
+})
 
 hamburgerIcon.addEventListener('click', () => {
   hamburgerNav.style.display = 'block';
