@@ -18,7 +18,11 @@ const hamburgerNav = document.querySelector('.hamburger__nav');
 const mainNav = document.querySelector('.main__navigation');
 
 hamburgerIcon.addEventListener('click', () => {
-  console.log('fukc')
+  hamburgerNav.style.display = 'block';
+});
+
+hamburgerClose.addEventListener('click', () => {
+  hamburgerNav.style.display = 'none';
 })
 
 const checkWindowWidth = () => {
