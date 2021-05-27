@@ -31,7 +31,7 @@
           display: block;
         }
       }
-      width: 50%;
+      width: 70%;
       display: inline-block;
       a {
         color: white;
@@ -53,9 +53,33 @@
         transform: translateX(30px);
         cursor: pointer;
       }
-      @media(max-width:800px) {
-        h3 {
-          font-size: 2rem;
+    }
+    @media(max-width:800px) {
+      .home-projects {
+        &__list-item {
+          width: 95%;
+          h4 {
+            font-size: 1.4rem;
+          }
+          h3 {
+            font-size: 2rem;
+            padding-bottom: 1rem;
+          }
+          &:hover h3 {
+            transform: translate(0);
+          }
+          .project-detail {
+            p {
+              font-size: 1.4rem;
+            }
+            ul {
+              flex-wrap: wrap;
+              li {
+                padding: 0.7rem 0;
+                padding-right: 1.5rem;
+              }
+            }
+          }
         }
       }
     }

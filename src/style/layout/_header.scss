@@ -1,8 +1,26 @@
+.hamburger__menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: white;
+    text-decoration: none;
+    padding-left: 5%;
+    h2 {
+      width: 5rem;
+      span {
+        color: #ff0000;
+      }
+    }
+  }
+}
+
 .hamburger__nav {
   z-index: 10;
   background-color: black;
   height: 100%;
   width: 100%;
+  top: 0;
   position: fixed;
   display: none;
   overflow-x: hidden;
