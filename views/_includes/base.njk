@@ -22,12 +22,17 @@
 
     {% include "_components/header.njk" %}
       <section class="about">
-    {% include "./about.njk" %}
+        {% include "./about.njk" %}
+      </section>
   </section>
   
     <main>
       {{ content | safe }}
     </main>
+    
+    <section id="contact" class="contact">
+      {% include "./contact.njk" %}
+    </section>
   </section>
   <script src="./../assets/js/main.js"> </script>
 </body>
