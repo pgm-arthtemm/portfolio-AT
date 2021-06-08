@@ -19,6 +19,17 @@ const mainNav = document.querySelector('.main__navigation');
 const mobileLogo = document.querySelector('.hamburger__menu-heading a');
 const hamburgerMenuItems = document.querySelectorAll('.hamburger__nav-list li');
 
+const toTopButton = document.querySelector('.totop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    toTopButton.style.display = 'block';
+  } else {
+    toTopButton.style.display = 'none';
+  }  
+})
+
+
 // Hide hamburger menu after clicking on menu item.
 // Added 0.5 seconds delay to wait for page change.
 hamburgerMenuItems.forEach(item => {

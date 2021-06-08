@@ -16,7 +16,15 @@
 
 <body>
   <section id="main-content">
+    <a href="#main-content" class="totop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
     {% include "_components/header.njk" %}
+      <section class="about">
+    {% include "./about.njk" %}
+  </section>
+  
     <main>
       {{ content | safe }}
     </main>
